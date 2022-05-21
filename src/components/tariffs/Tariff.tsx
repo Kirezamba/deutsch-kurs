@@ -1,6 +1,6 @@
 
 import Typography from '@mui/material/Typography';
-import { Box, List, ListItem } from '@mui/material';
+import { Box, List } from '@mui/material';
 import React from 'react';
 import { NewButton } from '../NewButton';
 
@@ -14,16 +14,15 @@ export interface TariffProps {
 export const Tariff: React.FC<TariffProps> = ({ options, price, title }): React.ReactElement => {
 
   return (
-    <Box sx={{ padding: '0 15px 15px 15px', mb: '30px', }}>
+    <Box sx={{ padding: '0 15px 15px 15px', mb: '30px', mt: '20px' }}>
       <Typography gutterBottom variant="h6" component="div">
         {title}
       </Typography>
-      <Box sx={{ display: 'flex', pl: '25px' }}>
-        <List sx={{ ml: '15px', }}>
+      <Box sx={{ display: 'flex', mt: '15px' }}>
+        <List sx={{ ml: '15px', textAlign: 'center' }}>
           {options.map(opt =>
-            <ListItem key={opt} >
-              <Typography variant='body2'>{opt}</Typography>
-            </ListItem>)
+            <Typography mb='15px' key={opt} variant='body2'>{opt}</Typography>
+          )
           }
         </List>
 
