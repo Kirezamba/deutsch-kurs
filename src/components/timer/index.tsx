@@ -11,7 +11,7 @@ interface TimerProps {
 export const Timer: React.FC<TimerProps> = ({ timer }): React.ReactElement => {
 
   return (
-    <Box sx={{ width: '100%', mb: '15px' }}>
+    <Box sx={{ width: '100%', mb: '15px', mt: '15px' }}>
       <Typography sx={{ textAlign: 'center' }} component='div' variant="h6">Скидка закончится через:</Typography>
       <Box sx={{ padding: '0 10px 0 10px', display: 'flex', justifyContent: 'space-between', textAlign: 'center', width: '100%' }}>
         <TImerSection label="Дней" number={timer.days} />
