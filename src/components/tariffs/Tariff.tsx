@@ -14,13 +14,13 @@ export interface TariffProps {
 export const Tariff: React.FC<TariffProps> = ({ options, price, title }): React.ReactElement => {
 
   return (
-    <Box sx={{ padding: '0 15px 15px 15px', mb: '30px', bgcolor: '#ded2b8' }}>
+    <Box sx={{ padding: '0 15px 15px 15px', mb: '30px', }}>
       <Typography gutterBottom variant="h6" component="div">
         {title}
       </Typography>
       <List >
         {options.map(opt =>
-          <ListItem disablePadding key={opt}>
+          <ListItem key={opt} >
             <Typography variant='body2'>{opt}</Typography>
           </ListItem>)
         }
