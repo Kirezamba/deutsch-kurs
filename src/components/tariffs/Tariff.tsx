@@ -18,13 +18,17 @@ export const Tariff: React.FC<TariffProps> = ({ options, price, title }): React.
       <Typography gutterBottom variant="h6" component="div">
         {title}
       </Typography>
-      <List >
-        {options.map(opt =>
-          <ListItem key={opt} >
-            <Typography variant='body2'>{opt}</Typography>
-          </ListItem>)
-        }
-      </List>
+      <Box sx={{ display: 'flex', pl: '25px' }}>
+        <List sx={{ ml: '15px', }}>
+          {options.map(opt =>
+            <ListItem key={opt} >
+              <Typography variant='body2'>{opt}</Typography>
+            </ListItem>)
+          }
+        </List>
+
+      </Box>
+
       <Typography sx={{ fontWeight: '700' }} variant="h6" color="text.secondary">
         {price}
       </Typography>
