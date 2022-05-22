@@ -21,7 +21,7 @@ export const Tariff: React.FC<TariffProps> = ({ options, price, title }): React.
       </Typography>
       <Box sx={{ mt: '15px', display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
         {options.map(opt =>
-          <Typography mb='14px' variant='body2'>{opt}</Typography>
+          <Typography key={opt} mb='14px' variant='body2'>{opt}</Typography>
         )}
       </Box>
 

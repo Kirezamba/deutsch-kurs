@@ -12,7 +12,7 @@ export const Timer: React.FC<TimerProps> = ({ timer }): React.ReactElement => {
 
   return (
     <Box sx={{ width: '100%', mb: '15px', mt: '15px' }}>
-      <Typography sx={{ textAlign: 'center' }} component='div' variant="h6">До старта курса:</Typography>
+      <Typography sx={{ textAlign: 'center', fontWeight: 700 }} component='div' variant="body1">До старта курса:</Typography>
       <Box sx={{ padding: '0 10px 0 10px', display: 'flex', justifyContent: 'space-between', textAlign: 'center', width: '100%' }}>
         <TImerSection label="Дней" number={timer.days} />
         <Box mr='10px'>
