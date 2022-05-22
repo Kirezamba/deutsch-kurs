@@ -34,7 +34,7 @@ export const Main = () => {
   return (
     <Box
       component="main"
-      sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }, marginTop: '55px', paddingBottom: '60px', display: 'flex', flexDirection: 'column', alignItmes: 'center', justifyContent: 'center' }}
+      sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }, marginTop: '55px', paddingBottom: '30px', display: 'flex', flexDirection: 'column', alignItmes: 'center', justifyContent: 'center' }}
     >
       <AboutMe />
       <AboutCourse />
