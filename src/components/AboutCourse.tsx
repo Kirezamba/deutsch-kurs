@@ -9,7 +9,7 @@ interface Props {
 }
 export const AboutCourse: React.FC<Props> = ({ timer }): React.ReactElement => {
   return (
-    <Box sx={{ padding: '5px 15px 15px 15px', mb: '20px', bgcolor: EnumColors.BACKGROUND }}>
+    <Box sx={{ padding: '5px 15px 0 15px', mb: '20px', bgcolor: EnumColors.BACKGROUND }}>
       <a style={{ fontSize: 0, textDecoration: 'none' }} href='123' id='aboutCourse'>a</a>
       <Typography sx={{ textAlign: 'center' }} gutterBottom variant="h5" component="div">
         Почему именно мой курс?

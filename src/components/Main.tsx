@@ -4,6 +4,7 @@ import { TimerState } from '../types/types'
 import useInterval from '../utils/hooks/useInterval'
 import { AboutCourse } from './AboutCourse'
 import { AboutMe } from './AboutMe'
+import { Credit } from './Credit'
 import { Socials } from './Socials'
 import Tariffs from './tariffs'
 
@@ -16,7 +17,7 @@ export const Main = () => {
     seconds: 0,
   });
   const timerCallback = () => {
-    const countdownDate = new Date("June 04 2022 15:00:00").getTime();
+    const countdownDate = new Date("May 30 2022 12:00:00").getTime();
     const now = new Date().getTime();
     const diff = countdownDate - now;
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -33,10 +34,11 @@ export const Main = () => {
   return (
     <Box
       component="main"
-      sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }, marginTop: '55px', paddingBottom: '60px' }}
+      sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }, marginTop: '55px', paddingBottom: '60px', display: 'flex', flexDirection: 'column', alignItmes: 'center', justifyContent: 'center' }}
     >
       <AboutMe />
       <AboutCourse timer={timer} />
+      <Credit />
       <Tariffs />
       <Socials main={false} />
     </Box>

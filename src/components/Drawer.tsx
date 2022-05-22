@@ -17,6 +17,7 @@ import MoodSharpIcon from '@mui/icons-material/MoodSharp';
 import ImportContactsSharpIcon from '@mui/icons-material/ImportContactsSharp';
 import CurrencyRubleSharpIcon from '@mui/icons-material/CurrencyRubleSharp';
 import ContactsSharpIcon from '@mui/icons-material/ContactsSharp';
+import CreditScoreIcon from '@mui/icons-material/CreditScore';
 import { Socials } from './Socials';
 
 const drawerWidth = 240;
@@ -32,10 +33,10 @@ export default function ResponsiveDrawer(props: Props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  const iconColor: string = EnumColors.SECONDARY
-  const drawerOptions = [{ text: 'Обо мне', href: '#aboutMe', icon: <MoodSharpIcon htmlColor={iconColor} /> }, { text: 'О курсе', href: '#aboutCourse', icon: <ImportContactsSharpIcon htmlColor={iconColor} /> }, { text: 'Тарифы', href: '#tariffs', icon: <CurrencyRubleSharpIcon htmlColor={iconColor} /> }, { text: 'Контакты', href: '#socials', icon: <ContactsSharpIcon htmlColor={iconColor} /> }]
+  const iconColor: string = '#000'
+  const drawerOptions = [{ text: 'Обо мне', href: '#aboutMe', icon: <MoodSharpIcon htmlColor={iconColor} /> }, { text: 'О курсе', href: '#aboutCourse', icon: <ImportContactsSharpIcon htmlColor={iconColor} /> }, { text: 'Рассрочка', href: '#credit', icon: <CreditScoreIcon htmlColor={iconColor} /> }, { text: 'Тарифы', href: '#tariffs', icon: <CurrencyRubleSharpIcon htmlColor={iconColor} /> }, { text: 'Контакты', href: '#socials', icon: <ContactsSharpIcon htmlColor={iconColor} /> }]
   const drawer = (
-    <Box sx={{ height: '100vh', bgcolor: EnumColors.PRIMARY }}>
+    <Box sx={{ height: '100vh', bgcolor: EnumColors.BACKGROUND }}>
       <Toolbar />
       <Divider />
       <List >
@@ -43,10 +44,10 @@ export default function ResponsiveDrawer(props: Props) {
           <ListItem key={opt.text} disablePadding>
             <a onClick={handleDrawerToggle} style={{ position: 'absolute', zIndex: 10000, width: '100%', opacity: 0, textDecoration: 'none' }} href={opt.href} >a</a>
             <ListItemButton href={opt.href} onClick={handleDrawerToggle}>
-              <ListItemIcon>
+              <ListItemIcon color='#000'>
                 {opt.icon}
               </ListItemIcon>
-              <ListItemText sx={{ color: EnumColors.SECONDARY }} primary={opt.text} />
+              <ListItemText sx={{ color: '#000' }} primary={opt.text} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -70,7 +71,7 @@ export default function ResponsiveDrawer(props: Props) {
       >
         <Toolbar>
           <IconButton
-            color="inherit"
+            color="default"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
